@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
-      botRegexTeam = /^\/teams/;
+      botRegexTeam = /^\/teams/;botRegexSt = /^\/standings/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -19,7 +19,7 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/ma32/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/imfl/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
@@ -44,14 +44,14 @@ function respond() {
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/ma32/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://daddyleagues.com/imfl/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/ma32/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/imfl/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
 
@@ -90,6 +90,11 @@ function respond() {
   else if(request.text && botRegexTeam.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/imfl/coaches");
+    this.res.end();
+  }
+  else.if(request.text && botRegexSt.test(request.text)) {
+    this.res.writehead(200);
+    postMessage("http://daddyleagues.com/imfl/standings/conference");
     this.res.end();
   }
   else {
