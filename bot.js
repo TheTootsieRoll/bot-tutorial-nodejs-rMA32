@@ -87,7 +87,7 @@ function respond() {
   
   
   }
-  else if(request.text && botRegexSalt.test(request.text)) {
+  else if(request.text && botRegexTeam.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/imfl/coaches");
     this.res.end();
