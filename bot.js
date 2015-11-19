@@ -9,7 +9,7 @@ function respond() {
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
       botRegexTeam = /^\/teams/;botRegexSt = /^\/standings/;botRegexFm = /^\/forum/;botRegexStt = /^\/stats team/;botRegexStp = /^\/stats player/;botRegexStr = /^\/stats rookies/;
-      botRegexRule = /^\/rules/;botRegexSch = /^\/schedule/;botRegexDN = /^\/DN/;botRegexDDn = /^\/Deez Nuts/;
+      botRegexRule = /^\/rules/;botRegexSch = /^\/schedule/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -126,16 +126,6 @@ function respond() {
   else if(request.text && botRegexSch.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/som/schedules");
-    this.res.end();
-  }
-  else if(reques.text && botRegexDN.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://www.quotesmeme.com/wp-content/uploads/2015/06/index9.jpg");
-    this.res.end();
-  }
-  else if(reques.text && botRegexDDN.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.imgflip.com/lmrkc.jpg");
     this.res.end();
   }
 
