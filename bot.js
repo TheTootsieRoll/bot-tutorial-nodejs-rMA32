@@ -123,6 +123,11 @@ function respond() {
     postMessage("http://sharlyyou.com/imfl_official_handbook.pdf");
     this.res.end();
   } 
+  else if(request.text && botRegexSC.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/imfl/schedules");
+    this.res.end();
+  }
 
   else {
     console.log("don't care");
