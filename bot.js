@@ -20,7 +20,7 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/imfl/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/som/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
@@ -45,14 +45,14 @@ function respond() {
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/imfl/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://daddyleagues.com/som/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/imfl/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/som/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
 
@@ -90,42 +90,42 @@ function respond() {
   }
   else if(request.text && botRegexTeam.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/imfl/coaches");
+    postMessage("http://daddyleagues.com/som/coaches");
     this.res.end();
   } 
   else if(request.text && botRegexSt.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/imfl/standings/conference");
+    postMessage("http://daddyleagues.com/som/standings/conference");
     this.res.end();
   }
   else if(request.text && botRegexFm.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/imfl/forum");
+    postMessage("http://daddyleagues.com/som/forum");
     this.res.end();
   } 
   else if(request.text && botRegexStt.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/imfl/stats/team");
+    postMessage("http://daddyleagues.com/som/stats/team");
     this.res.end();
   } 
   else if(request.text && botRegexStp.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/imfl/stats/player");
+    postMessage("http://daddyleagues.com/som/stats/player");
     this.res.end();
   } 
   else if(request.text && botRegexStr.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/imfl/stats/rookie");
+    postMessage("http://daddyleagues.com/som/stats/rookie");
     this.res.end();
   } 
   else if(request.text && botRegexRule.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://sharlyyou.com/imfl_official_handbook.pdf");
+    postMessage("http://daddyleagues.com/som/stats/rules");
     this.res.end();
   } 
   else if(request.text && botRegexSch.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/imfl/schedules");
+    postMessage("http://daddyleagues.com/som/schedules");
     this.res.end();
   }
 
