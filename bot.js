@@ -120,7 +120,7 @@ function respond() {
   } 
   else if(request.text && botRegexRule.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/imfl/stats/rules");
+    postMessage("http://www.sharlyyou.com/imfl_official_handbook.pdf");
     this.res.end();
   } 
   else if(request.text && botRegexSch.test(request.text)) {
