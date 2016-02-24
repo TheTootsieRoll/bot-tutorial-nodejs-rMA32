@@ -120,7 +120,7 @@ function respond() {
   } 
   else if(request.text && botRegexRule.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/stats/rules");
+    postMessage("http://daddyleagues.com/som/rules");
     this.res.end();
   } 
   else if(request.text && botRegexSch.test(request.text)) {
