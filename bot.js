@@ -159,7 +159,7 @@ function respond() {
     postMessage("https://media.giphy.com/media/OqNBIjnudq2D6/giphy.gif");
     this.res.end();
   }
-    else if(request.text && botODB.test(request.text)) {
+    else if(request.text && botYee.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://media.giphy.com/media/fpXxIjftmkk9y/giphy.gif");
     this.res.end();
