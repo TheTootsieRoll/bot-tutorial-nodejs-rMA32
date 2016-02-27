@@ -10,6 +10,7 @@ function respond() {
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
       botRegexTeam = /^\/teams/;botRegexSt = /^\/standings/;botRegexFm = /^\/forum/;botRegexStt = /^\/stats team/;botRegexStp = /^\/stats player/;botRegexStr = /^\/stats rookies/;
       botRegexRule = /^\/rules/;botRegexSch = /^\/schedule/;botRegexIMFL = /^\/imfl/;botRegexCon = /^\/contacts/;botRegexBye = /^\@bye week/;
+      botRegexByee = /^\@byeweek/;botRegexByye = /^\@bye/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -140,7 +141,17 @@ function respond() {
   }
   else if(request.text && botRegexBye.test(request.text)) {
     this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/w0CPP48tkM6Ag/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botRegexByee.test(request.text)) {
+    this.res.writeHead(200);
     postMessage("https://media.giphy.com/media/8ObL3pmo0BkIM/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botRegexByye.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/JEJYvwfHmBlgQ/giphy.gif");
     this.res.end();
   }
 
