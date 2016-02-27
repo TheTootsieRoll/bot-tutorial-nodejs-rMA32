@@ -138,7 +138,7 @@ function respond() {
     postmMessage("http://daddyleagues.com/imfl/forum/topic/32095");
     this.res.end()
   }
-  else if(request.text && botRegexSh.test(request.text)) {
+  else if(request.text && botRegexBye.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://s-media-cache-ak0.pinimg.com/236x/f9/d4/c3/f9d4c3b9a2d1e3beb7418d16a58fcc19.jpg");
     this.res.end();
