@@ -140,7 +140,7 @@ function respond() {
   }
   else if(request.text && botRegexBye.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://s-media-cache-ak0.pinimg.com/236x/f9/d4/c3/f9d4c3b9a2d1e3beb7418d16a58fcc19.jpg");
+    postMessage("https://media.giphy.com/media/8ObL3pmo0BkIM/giphy.gif");
     this.res.end();
   }
 
