@@ -11,6 +11,7 @@ function respond() {
       botRegexTeam = /^\/teams/;botRegexSt = /^\/standings/;botRegexFm = /^\/forum/;botRegexStt = /^\/stats team/;botRegexStp = /^\/stats player/;botRegexStr = /^\/stats rookies/;
       botRegexRule = /^\/rules/;botRegexSch = /^\/schedule/;botRegexIMFL = /^\/imfl/;botRegexCon = /^\/contacts/;
       botRegexByee = /^\@byeweek/;botRegexByye = /^\@bye/;botRegexBye = /^\@bye week/;botRegexGoat = /^\/goat/;botYee = /(.*yeezus)/i;
+      botEnv = /(.*Envxy is a dick hole)/i;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -164,6 +165,11 @@ function respond() {
     postMessage("https://media.giphy.com/media/fpXxIjftmkk9y/giphy.gif");
     this.res.end();
   } 
+    else if(request.text && botYee.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://reactiongif.org/wp-content/uploads/GIF/2014/12/Congratulations-You-Did-It-GIF-2015.gif");
+    this.res.end();
+  }
 
   else {
     console.log("don't care");
