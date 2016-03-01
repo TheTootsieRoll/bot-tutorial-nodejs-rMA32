@@ -165,7 +165,7 @@ function respond() {
     postMessage("https://media.giphy.com/media/fpXxIjftmkk9y/giphy.gif");
     this.res.end();
   } 
-    else if(request.text && botYee.test(request.text)) {
+    else if(request.text && botEnv.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://reactiongif.org/wp-content/uploads/GIF/2014/12/Congratulations-You-Did-It-GIF-2015.gif");
     this.res.end();
