@@ -161,7 +161,7 @@ function respond() {
     this.res.end();
   }
 
-  else if(request.text && botHar.test(request.text)) {
+  else if(request.text && botHara.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://www.reddit.com/r/MRW/comments/4m9n0q/harambes_brother_reaction_when_he_saw_the/");
     this.res.end();
