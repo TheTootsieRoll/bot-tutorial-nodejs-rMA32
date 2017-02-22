@@ -10,7 +10,7 @@ function respond() {
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
       botRegexTeam = /^\/teams/;botRegexSt = /^\/standings/;botRegexFm = /^\/forum/;botRegexStt = /^\/stats team/;botRegexStp = /^\/stats player/;botRegexStr = /^\/stats rookies/;
       botRegexRule = /^\/rules/;botRegexSch = /^\/schedule/;
-      botRegexByee = /^\@byeweek/;botRegexByye = /^\@bye/;botRegexBye = /^\@bye week/;botRegexGoat = /^\/goat/;botYee = /(.*yeezus)/i;
+      botRegexByee = /^\@byeweek/;botRegexByye = /^\@bye/;botRegexBye = /^\@bye week/;botRegexGoat = /^\/goat/;botYee = /(.*yeezus)/i;botHara = /(.*Harambe)/i;
       botEnv = /(.*Envxy is a dick hole)/i;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -22,7 +22,7 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/meffl/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
@@ -54,7 +54,7 @@ function respond() {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/som/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/meffl/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
 
@@ -92,42 +92,42 @@ function respond() {
   }
   else if(request.text && botRegexTeam.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/coaches");
+    postMessage("http://daddyleagues.com/meffl/coaches");
     this.res.end();
   } 
   else if(request.text && botRegexSt.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/standings/conference");
+    postMessage("http://daddyleagues.com/meffl/standings/conference");
     this.res.end();
   }
   else if(request.text && botRegexFm.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/forum");
+    postMessage("http://daddyleagues.com/meffl/forum");
     this.res.end();
   } 
   else if(request.text && botRegexStt.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/stats/team");
+    postMessage("http://daddyleagues.com/meffl/stats/team");
     this.res.end();
   } 
   else if(request.text && botRegexStp.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/stats/player");
+    postMessage("http://daddyleagues.com/meffl/stats/player");
     this.res.end();
   } 
   else if(request.text && botRegexStr.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/stats/rookie");
+    postMessage("http://daddyleagues.com/meffl/stats/rookie");
     this.res.end();
   } 
   else if(request.text && botRegexRule.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/rules");
+    postMessage("http://daddyleagues.com/meffl/rules");
     this.res.end();
   } 
   else if(request.text && botRegexSch.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/schedules");
+    postMessage("http://daddyleagues.com/meffl/schedules");
     this.res.end();
   }
     else if(request.text && botRegexBye.test(request.text)) {
@@ -152,7 +152,7 @@ function respond() {
   }
   else if(request.text && botYee.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://media.giphy.com/media/fpXxIjftmkk9y/giphy.gif");
+    postMessage("http://www.reactiongifs.com/search/agree");
     this.res.end();
   }
   else if(request.text && botEnv.test(request.text)) {
@@ -161,6 +161,11 @@ function respond() {
     this.res.end();
   }
 
+  else if(request.text && botHar.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://www.reddit.com/r/MRW/comments/4m9n0q/harambes_brother_reaction_when_he_saw_the/");
+    this.res.end();
+  }
   else {
     console.log("don't care");
     this.res.writeHead(200);
