@@ -10,8 +10,8 @@ function respond() {
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
       botRegexTeam = /^\/teams/;botRegexSt = /^\/standings/;botRegexFm = /^\/forum/;botRegexStt = /^\/stats team/;botRegexStp = /^\/stats player/;botRegexStr = /^\/stats rookies/;
       botRegexRule = /^\/rules/;botRegexSch = /^\/schedule/;
-      botRegexByee = /^\@byeweek/;botRegexByye = /^\@bye/;botRegexBye = /^\@bye week/;botRegexGoat = /^\/goat/;botYee = /(.*yeezus)/i;
-      botEnv = /(.*Envxy is a dick hole)/i;
+      botRegexByee = /^\@byeweek/;botRegexByye = /^\@bye/;botRegexBye = /^\@bye week/;botRegexGoat = /^\/goat/;botYee = /(.*yeezus)/i;botHar = /(.*yeezus)/i;
+      botEnv = /(.*Envxy is a dick hole)/i;botRegexNO = /^\no/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -152,7 +152,7 @@ function respond() {
   }
   else if(request.text && botYee.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.reactiongifs.com/search/agree");
+    postMessage("https://i.groupme.com/342x198.gif.c35f46239c924596a4f2e52d08f70ae3");
     this.res.end();
   }
   else if(request.text && botEnv.test(request.text)) {
@@ -160,7 +160,17 @@ function respond() {
     postMessage("http://reactiongif.org/wp-content/uploads/GIF/2014/12/Congratulations-You-Did-It-GIF-2015.gif");
     this.res.end();
   }
-
+  else if(request.text && botHar.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/361x247.gif.d34f29db4b5c48ae96562abbd5b7ae81");
+    this.res.end();
+  }
+  else if(request.text && botRegexNO.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/245x200.gif.51d0ea4b55cc46279dadba422788f0ce");
+    this.res.end();
+  }
+  
   else {
     console.log("don't care");
     this.res.writeHead(200);
