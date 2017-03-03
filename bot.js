@@ -170,13 +170,12 @@ function respond() {
     postMessage("https://i.groupme.com/245x200.gif.51d0ea4b55cc46279dadba422788f0ce");
     this.res.end();
   }
-  
- else if(request.text && botGiant.test(request.text)) {
+  else if(request.text && botRegexWatch.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://out.reddit.com/t3_2gva5s?url=http%3A%2F%2Fi.imgur.com%2FnKCYKd0.gif&token=AQAAV9O4WLLEkrE5TmjpEd95BqdMQXytYJOcUsXC05vO02832FCa&app_name=reddit.com");
     this.res.end();
   }
- else if(request.text && botWatch.test(request.text)) {
+  else if(request.text && botWatch.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://m.popkey.co/fa50d7/drOG4.gif");
     this.res.end();
