@@ -11,7 +11,7 @@ function respond() {
       botRegexTeam = /^\/teams/;botRegexSt = /^\/standings/;botRegexFm = /^\/forum/;botRegexStt = /^\/stats team/;botRegexStp = /^\/stats player/;botRegexStr = /^\/stats rookies/;
       botRegexRule = /^\/rules/;botRegexSch = /^\/schedule/;
       botRegexByee = /^\@byeweek/;botRegexByye = /^\@bye/;botRegexBye = /^\@bye week/;botRegexGoat = /^\/goat/;botYee = /(.*yeezus)/i;botHar = /(.*harambe)/i;
-      botEnv = /(.*Envxy is a dick hole)/i;botRegexNO = /^\/no/;botGiant = /(.*#GoGiants)/i;botRegexWatch = /^\/watching/
+      botEnv = /(.*Envxy is a dick hole)/i;botRegexNO = /^\/no/;botGiant = /(.*#GoGiants)/i;botRegexWatch = /^\/watching/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
