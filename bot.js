@@ -172,7 +172,7 @@ function respond() {
   }
   else if(request.text && botGia.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://out.reddit.com/t3_2gva5s?url=http%3A%2F%2Fi.imgur.com%2FnKCYKd0.gif&token=AQAAV9O4WLLEkrE5TmjpEd95BqdMQXytYJOcUsXC05vO02832FCa&app_name=reddit.com");
+    postMessage("http://i.imgur.com/nKCYKd0.gif");
     this.res.end();
   }
   else if(request.text && botRegexWatch.test(request.text)) {
