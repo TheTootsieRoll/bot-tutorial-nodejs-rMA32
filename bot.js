@@ -11,7 +11,7 @@ function respond() {
       botRegexTeam = /^\/teams/;botRegexSt = /^\/standings/;botRegexFm = /^\/forum/;botRegexStt = /^\/stats team/;botRegexStp = /^\/stats player/;botRegexStr = /^\/stats rookies/;
       botRegexRule = /^\/rules/;botRegexSch = /^\/schedule/;
       botRegexByee = /^\@byeweek/;botRegexByye = /^\@bye/;botRegexBye = /^\@bye week/;botRegexGoat = /^\/goat/;botYee = /(.*yeezus)/i;botHar = /(.*harambe)/i;
-      botEnv = /(.*Envxy is a dick hole)/i;botRegexNO = /^\/no/;
+      botEnv = /(.*Envxy is a dick hole)/i;botRegexNO = /^\/no/;botGiant = /(.*#GoGiants)/i;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -162,12 +162,18 @@ function respond() {
   }
   else if(request.text && botHar.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/361x247.gif.d34f29db4b5c48ae96562abbd5b7ae81");
+    postMessage("https://i.imgur.com/LX1kGeK.gif");
     this.res.end();
   }
   else if(request.text && botRegexNO.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/245x200.gif.51d0ea4b55cc46279dadba422788f0ce");
+    this.res.end();
+  }
+  
+  else if(request.text && botGiant.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://out.reddit.com/t3_2gva5s?url=http%3A%2F%2Fi.imgur.com%2FnKCYKd0.gif&token=AQAAV9O4WLLEkrE5TmjpEd95BqdMQXytYJOcUsXC05vO02832FCa&app_name=reddit.com");
     this.res.end();
   }
   
