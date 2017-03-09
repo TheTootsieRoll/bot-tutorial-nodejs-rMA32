@@ -10,8 +10,8 @@ function respond() {
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
       botRegexTeam = /^\/teams/;botRegexSt = /^\/standings/;botRegexFm = /^\/forum/;botRegexStt = /^\/stats team/;botRegexStp = /^\/stats player/;botRegexStr = /^\/stats rookies/;
       botRegexRule = /^\/rules/;botRegexSch = /^\/schedule/;
-      botRegexByee = /^\@byeweek/;botRegexByye = /^\@bye/;botRegexBye = /^\@bye week/;botRegexGoat = /^\/goat/;botYee = /(.*yeezus)/i;
-      botEnv = /(.*Envxy is a dick hole)/i;
+      botRegexByee = /^\@byeweek/;botRegexByye = /^\@bye/;botRegexBye = /^\@bye week/;botRegexGoat = /^\/goat/;botYee = /(.*yeezus)/i;botHar = /(.*harambe)/i;
+      botEnv = /(.*Envxy is a dick hole)/i;botRegexNO = /^\/no/;botGia = /(.*#GoGiants)/i;botRegexWatch = /^\/watching/;botGia2 = /(.*#GoGMen)/i;botGia3 = /(.*#GoG-Men)/i;botGia4 = /(.*#GoBigBlue)/i;botGia5 = /(.*#Go Giants)/i;botGia6 = /(.*#Go Big Blue)/i;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -22,7 +22,7 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/meffl/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
@@ -54,7 +54,7 @@ function respond() {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/som/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/meffl/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
 
@@ -92,42 +92,42 @@ function respond() {
   }
   else if(request.text && botRegexTeam.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/coaches");
+    postMessage("http://daddyleagues.com/meffl/coaches");
     this.res.end();
   } 
   else if(request.text && botRegexSt.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/standings/conference");
+    postMessage("http://daddyleagues.com/meffl/standings/conference");
     this.res.end();
   }
   else if(request.text && botRegexFm.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/forum");
+    postMessage("http://daddyleagues.com/meffl/forum");
     this.res.end();
   } 
   else if(request.text && botRegexStt.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/stats/team");
+    postMessage("http://daddyleagues.com/meffl/stats/team");
     this.res.end();
   } 
   else if(request.text && botRegexStp.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/stats/player");
+    postMessage("http://daddyleagues.com/meffl/stats/player");
     this.res.end();
   } 
   else if(request.text && botRegexStr.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/stats/rookie");
+    postMessage("http://daddyleagues.com/meffl/stats/rookie");
     this.res.end();
   } 
   else if(request.text && botRegexRule.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/rules");
+    postMessage("http://daddyleagues.com/meffl/rules");
     this.res.end();
   } 
   else if(request.text && botRegexSch.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/som/schedules");
+    postMessage("http://daddyleagues.com/meffl/schedules");
     this.res.end();
   }
     else if(request.text && botRegexBye.test(request.text)) {
@@ -152,7 +152,7 @@ function respond() {
   }
   else if(request.text && botYee.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://media.giphy.com/media/fpXxIjftmkk9y/giphy.gif");
+    postMessage("https://i.groupme.com/342x198.gif.c35f46239c924596a4f2e52d08f70ae3");
     this.res.end();
   }
   else if(request.text && botEnv.test(request.text)) {
@@ -160,7 +160,52 @@ function respond() {
     postMessage("http://reactiongif.org/wp-content/uploads/GIF/2014/12/Congratulations-You-Did-It-GIF-2015.gif");
     this.res.end();
   }
-
+  else if(request.text && botHar.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.imgur.com/LX1kGeK.gif");
+    this.res.end();
+  }
+  else if(request.text && botRegexNO.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/245x200.gif.51d0ea4b55cc46279dadba422788f0ce");
+    this.res.end();
+  }
+  else if(request.text && botGia.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i.imgur.com/nKCYKd0.gif");
+    this.res.end();
+  }
+  else if(request.text && botRegexWatch.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://m.popkey.co/fa50d7/drOG4.gif");
+    this.res.end();
+  }
+  else if(request.text && botGia2.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/cN6lmYtZVWIF2/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botGia3.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/LtArhBbsJZbd6/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botGia4.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/rfskmSvktqSoo/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botGia5.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/3oAt2dA6LxMkRrGc0g/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botGia6.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/zczfWtz0Xkzle/giphy.gif");
+    this.res.end();
+  }
+  
   else {
     console.log("don't care");
     this.res.writeHead(200);
